@@ -1,0 +1,376 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --cor-principal: #0a3871;
+  --cor-secundaria: #d8dfe8;
+  --cor-fundo: #f3f5fc;
+  --branco: #ffffff;
+  --info-texto: #495057;
+  --titulo: #343a40;
+}
+
+body {
+  background-color: var(--cor-fundo);
+}
+
+.logo-img {
+  margin: 40px 84px 0px;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+/* ========== ENTRADA DE TEXTO ========*/
+.entrada-texto {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.entrada-textarea {
+  width: 680px;
+  height: 550px;
+  outline: 0px;
+  border: none;
+  background-color: var(--cor-fundo);
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--cor-principal);
+  resize: none;
+}
+
+.entrada-textarea::placeholder {
+  color: var(--cor-principal);
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+/* ========== INFORMAÇÃO ========*/
+
+.icon-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.icon-texto {
+  font-size: 12px;
+  color: var(--info-texto);
+  line-height: 150%;
+}
+
+/* ========== BOTÕES ========*/
+
+.button-container {
+  display: flex;
+  margin-top: 16px;
+  gap: 24px;
+}
+
+.button-cripto,
+.button-descripto,
+.button-copy {
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  font-size: 16px;
+}
+.button-cripto {
+  background-color: var(--cor-principal);
+  border: none;
+  color: var(--branco);
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.button-cripto:hover {
+  background-color: #0d478e;
+  width: 335px;
+  height: 76px;
+}
+
+.button-descripto {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
+  border: 1px solid var(--cor-principal);
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.button-descripto:hover {
+  background-color: #fdfdfd;
+  width: 335px;
+  height: 76px;
+}
+
+/* ========== SAÍDA DE TEXTO ========*/
+
+.saida-texto {
+  background-color: var(--branco);
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  width: 400px;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-container {
+  display: flex;
+  width: 336px;
+  flex-direction: column;
+  text-align: center;
+  visibility: visible;
+  position: absolute;
+}
+
+.img-container > h1 {
+  color: var(--titulo);
+  margin: 32px 0px 16px;
+}
+
+.img-container > p {
+  color: var(--info-texto);
+  font-size: 16px;
+}
+
+.container-texto {
+  display: none;
+  width: 350px;
+  height: 100vh;
+  padding-top: 20px;
+  word-break: break-all;
+  font-size: 24px;
+  color: var(--cor-principal);
+}
+
+.button-copy {
+  /* display: block; */
+  visibility: hidden;
+  color: var(--cor-principal);
+  background-color: var(--branco);
+  border: 1px solid var(--cor-principal);
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 53px;
+  gap: 16px;
+}
+
+.icon-redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+  gap: 8px;
+}
+.icon-git,
+.icon-linkedin {
+  width: 16px;
+  height: 16px;
+}
+
+/* ========== RESPONSIVIDADE ========*/
+
+@media (min-width: 375px) and (max-width: 700px) {
+  .logo-img {
+    margin: 24px 0px 24px 16px;
+  }
+  .main-container {
+    gap: 34px;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .entrada-textarea {
+    width: 343px;
+    height: auto;
+  }
+
+  .img-busca {
+    display: none;
+  }
+
+  .container-texto {
+    width: 300px;
+    padding-top: 0px;
+    height: 100vh;
+    padding-top: 10px;
+    overflow-y: scroll;
+  }
+
+  .saida-texto {
+    width: 327px;
+    height: 300px;
+  }
+
+  .img-container > h1 {
+    font-size: 24px;
+    margin: 0px;
+  }
+
+  .img-container {
+    margin: 32px;
+    gap: 16px;
+    position: inherit;
+    position: absolute;
+  }
+
+  .button-copy {
+    visibility: hidden;
+    width: 250px;
+    height: 200px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1400px) {
+  .main-container {
+    gap: 40px;
+  }
+
+  .entrada-textarea {
+    width: 688px;
+    height: 475px;
+  }
+
+  .saida-texto {
+    width: 688px;
+    height: 300px;
+  }
+
+  .container-texto {
+    width: 650px;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .img-container {
+    width: 624px;
+  }
+
+  .img-container > h1 {
+    color: var(--titulo);
+    margin: 0px;
+  }
+
+  .img-busca {
+    display: none;
+  }
+
+  .button-copy {
+    visibility: hidden;
+    width: 280px;
+    height: 250px;
+    margin: 10px 0px 12px 0px;
+  }
+}
+
+/* ========== MODO DARK ========*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #161618;
+  }
+
+  .logo-img {
+    filter: invert(53%) sepia(67%) saturate(4662%) hue-rotate(8deg)
+      brightness(100%) contrast(97%);
+  }
+
+  .entrada-textarea {
+    background-color: #161618;
+    color: #fc9b43;
+  }
+
+  .entrada-textarea::placeholder {
+    color: #fc9b43;
+  }
+
+  .icon-img {
+    filter: invert(73%) sepia(0%) saturate(0%) hue-rotate(179deg)
+      brightness(91%) contrast(94%);
+  }
+
+  .button-cripto {
+    background-color: #e76e04;
+    border: 1px solid #000000;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  .button-cripto:hover {
+    background-color: #b85903;
+    width: 335px;
+    height: 76px;
+    transition: 0.6s;
+  }
+
+  .button-descripto {
+    background-color: #000000;
+    color: #e76e04;
+    border: 1px solid #e76e04;
+    cursor: pointer;
+    transition: all 0.6s;
+  }
+
+  .button-descripto:hover {
+    background-color: #232323;
+    width: 335px;
+    height: 76px;
+  }
+
+  .icon-texto {
+    color: #a7a7a7;
+  }
+
+  .saida-texto {
+    background-color: #1e1e1e;
+  }
+
+  .container-texto {
+    color: #fc9b43;
+  }
+
+  .button-copy {
+    background-color: #000000;
+    color: #e76e04;
+    border: 1px solid #e76e04;
+    cursor: pointer;
+  }
+  .img-container > h1,
+  .img-container > p {
+    color: #e5e5e5;
+  }
+
+  .rodape {
+    color: #e5e5e5;
+  }
+
+  .icon-git,
+  .icon-linkedin {
+    filter: invert(53%) sepia(67%) saturate(4662%) hue-rotate(8deg)
+      brightness(100%) contrast(97%);
+  }
+}
