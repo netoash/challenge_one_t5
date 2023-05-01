@@ -157,7 +157,6 @@ body {
 }
 
 .button-copy {
-  /* display: block; */
   visibility: hidden;
   color: var(--cor-principal);
   background-color: var(--branco);

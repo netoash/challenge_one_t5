@@ -13,11 +13,11 @@ function criptografa_texto(texto_recebido){
 
 function descriptografa_texto(texto_recebido){
   textoCripto = texto_recebido
-  .replace(/enter/g, 'e')
-  .replace(/imes/g, 'i')
-  .replace(/ai/g, 'a')
-  .replace(/ober/g, 'o')
-  .replace(/ufat/g, 'u')
+    .replace(/enter/g, 'e')
+    .replace(/imes/g, 'i')
+    .replace(/ai/g, 'a')
+    .replace(/ober/g, 'o')
+    .replace(/ufat/g, 'u')
 }
 
 function mostra_texto(){
